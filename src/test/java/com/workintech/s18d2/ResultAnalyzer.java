@@ -4,7 +4,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.json.JSONObject;
+import org.json.JSONObject
 import org.junit.jupiter.api.extension.AfterAllCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestWatcher;
@@ -55,7 +55,7 @@ public class ResultAnalyzer implements TestWatcher, AfterAllCallback{
         long failure = summary.get(TestResultStatus.FAILED) != null ? summary.get(TestResultStatus.FAILED) : 0;
 
         double score = (double) success / (success + failure);
-        String userId = "999999";
+        String userId = "304045";
 
         JSONObject json = new JSONObject();
         json.put("score", score);
